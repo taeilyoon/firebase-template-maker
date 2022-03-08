@@ -1,7 +1,21 @@
 {
-  "firebase-config": {},
+  "firebaseConfig": {},
   "option": {
-    "dummyCount": {}
+    "dummyCount": {},
+    "dummyId": {
+      "user": [
+        "test1Id",
+        "test2Id",
+        "test3Id"
+      ]
+    },
+    "enum": {
+      "like-value": [
+        -1,
+        0,
+        1
+      ]
+    }
   },
   "models": [
     {
@@ -15,7 +29,34 @@
         {
           "name": "writer",
           "type": "string",
-          "ref" : "user"
+          "ref": "user"
+        }
+        ,{
+          "name" : "like",
+          "type": "number",
+          "enum" : "like-value"
+        }
+      ],
+      "collection": [
+        {
+          "name": "like",
+          "data": [
+            {
+              "name": "userId",
+              "type": "string",
+              "ref": "user"
+            },
+            {
+              "name": "date",
+              "type": "timestamp",
+              "dummy": "date-past"
+            },
+            {
+              "name": "like",
+              "type": "number",
+              "enum": "like-value"
+            }
+          ]
         }
       ]
     },
@@ -32,17 +73,10 @@
           "type": "string",
           "ref": "post"
         }
-      ],
-      "collection": [
-        {
-          "name": "friend",
-          "data": [
-            {
-              "name": "name",
-              "type": "string",
-              "ref": "user"
-            }
-          ]
+        ,{
+          "name" : "like",
+          "type": "number",
+          "enum" : "like-value"
         }
       ]
     }
