@@ -1,6 +1,24 @@
 {
   "firebase-config": {},
+  "option": {
+    "dummyCount": {}
+  },
   "models": [
+    {
+      "name": "post",
+      "data": [
+        {
+          "name": "title",
+          "type": "string",
+          "dummy": "word"
+        },
+        {
+          "name": "writer",
+          "type": "string",
+          "ref" : "user"
+        }
+      ]
+    },
     {
       "name": "user",
       "data": [
@@ -10,7 +28,7 @@
           "dummy": "name"
         },
         {
-          "name": "name",
+          "name": "writePost",
           "type": "string",
           "ref": "post"
         }
@@ -19,11 +37,11 @@
         {
           "name": "friend",
           "data": [
-              {
-                "name": "name",
-                "type": "string",
-                "ref": "user"
-              }
+            {
+              "name": "name",
+              "type": "string",
+              "ref": "user"
+            }
           ]
         }
       ]

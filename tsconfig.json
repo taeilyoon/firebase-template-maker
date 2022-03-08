@@ -3,5 +3,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true
-  }
+  },
+  "include": [
+    "./*.ts"
+  ]
 }
