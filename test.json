@@ -1,0 +1,32 @@
+{
+  "firebase-config": {},
+  "models": [
+    {
+      "name": "user",
+      "data": [
+        {
+          "name": "name",
+          "type": "string",
+          "dummy": "name"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "ref": "post"
+        }
+      ],
+      "collection": [
+        {
+          "name": "friend",
+          "data": [
+              {
+                "name": "name",
+                "type": "string",
+                "ref": "user"
+              }
+          ]
+        }
+      ]
+    }
+  ]
+}
